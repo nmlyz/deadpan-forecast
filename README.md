@@ -18,4 +18,7 @@ python3 main.py
 ```
 
 It writes the forecast to `/output/entry.txt` (`OUTPUT_DIR` overrides
-the directory). Running it twice produces byte-identical output.
+the directory). The program validates the line first — one line, between
+1 and 160 characters — then writes it with a trailing newline and leaves
+the file world-readable (mode 0644). Running it twice produces
+byte-identical output.
